@@ -12,6 +12,6 @@ class DetallePedidoSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\DetallePedido::factory(15)->create();
+        \App\Models\DetallePedido::factory(2)->create();
     }
 }

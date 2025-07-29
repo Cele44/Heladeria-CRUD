@@ -33,15 +33,11 @@ class PromocionFactory extends Factory
         return [
             'nombre' => fake()->words(3, true),
             'descripcion' => fake()->paragraph(),
-            'tipo' => fake()->randomElement(['porcentaje', 'monto', 'combo', 'happy_hour', 'primera_compra', 'cumpleaños', 'desbloqueable']),
+            'tipo' => fake()->randomElement(['2x1', 'combo', 'happy_hour', 'primera_compra', 'cumpleaños']),
             'descuento_porcentaje' => fake()->randomFloat(2, 5, 30),
-            'descuento_monto' => fake()->randomFloat(2, 5, 20),
-            'fecha_inicio' => fake()->dateTimeBetween('-1 month', '+1 month'),
-            'fecha_fin' => fake()->dateTimeBetween('+1 month', '+3 months'),
+            'fecha_inicio' => now(),
+            'fecha_fin' => now()->addMonths(2),
             'dias_aplicables' => json_encode(fake()->randomElements(['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo'], fake()->numberBetween(1, 7))),
-            'aplica_solo_primera_compra' => fake()->boolean(),
-            'aplica_en_cumpleanos' => fake()->boolean(),
-            'compras_requeridas' => fake()->numberBetween(0, 5),
             'activa' => true,
             'combo_detalle' => json_encode([
                 'items' => $items,

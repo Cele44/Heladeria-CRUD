@@ -7,13 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class Cliente extends Model
+class Cliente extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\ClienteFactory> */
+    use Notifiable;
     use HasFactory, Notifiable;
-
-    protected $primaryKey = 'cliente_id';
-    protected $table = 'clientes';
 
     protected $fillable = [
         'nombre',
@@ -27,8 +24,11 @@ class Cliente extends Model
 
     protected $hidden = [
         'password_hash',
-        'remember_token',
     ];
+    public function getAuthPassword()
+    {
+        return $this->password_hash;
+    }
 
     // Relaciones
     public function pedidos()

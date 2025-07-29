@@ -9,8 +9,8 @@ class Notificacion extends Model
 {
     /** @use HasFactory<\Database\Factories\NotificacionFactory> */
     use HasFactory;
-    protected $primaryKey = 'notificacion_id';
     protected $table = 'notificaciones';
+    protected $primaryKey = 'notificacion_id';
 
     protected $fillable = [
         'cliente_id',
@@ -18,7 +18,6 @@ class Notificacion extends Model
         'mensaje',
         'tipo',
         'leida',
-        'url_destino',
     ];
 
     // Relación con Cliente

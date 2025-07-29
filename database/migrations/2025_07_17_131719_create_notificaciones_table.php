@@ -19,7 +19,6 @@ return new class extends Migration
             $table->enum('tipo', ['promocion', 'nuevo_sabor', 'pedido', 'fidelizacion']);
             $table->timestamp('fecha_envio')->useCurrent();
             $table->boolean('leida')->default(false);
-            $table->string('url_destino')->nullable();
             $table->timestamps();
         });
     }

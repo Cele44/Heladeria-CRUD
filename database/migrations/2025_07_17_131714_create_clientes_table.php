@@ -19,10 +19,9 @@ return new class extends Migration
             $table->string('telefono', 20)->nullable();
             $table->text('direccion')->nullable();
             $table->string('password_hash');
-            $table->timestamp('fecha_registro')->useCurrent();
             $table->boolean('activo')->default(true);
             $table->timestamp('ultimo_login')->nullable();
-            //$table->rememberToken();
+            $table->boolean('rol')->default(false);
             $table->timestamps();
         });
     }

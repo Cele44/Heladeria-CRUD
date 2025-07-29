@@ -9,7 +9,6 @@ class TransaccionPunto extends Model
 {
     /** @use HasFactory<\Database\Factories\TransaccionPuntoFactory> */
     use HasFactory;
-    protected $primaryKey = 'transaccion_id';
     protected $table = 'transacciones_puntos';
 
     protected $fillable = [

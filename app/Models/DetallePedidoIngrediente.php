@@ -23,12 +23,12 @@ class DetallePedidoIngrediente extends Model
     // Relación con DetallePedido
     public function detallePedido()
     {
-        return $this->belongsTo(DetallePedido::class, 'detalle_id');
+        return $this->belongsTo(DetallePedido::class);
     }
 
     // Relación con Ingrediente
     public function ingrediente()
     {
-        return $this->belongsTo(Ingrediente::class, 'ingrediente_id');
+        return $this->belongsTo(Ingrediente::class);
     }
 }

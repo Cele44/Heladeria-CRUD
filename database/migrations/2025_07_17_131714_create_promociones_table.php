@@ -15,15 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('nombre', 100);
             $table->text('descripcion');
-            $table->enum('tipo', ['porcentaje', 'monto', 'combo', 'happy_hour', 'primera_compra', 'cumpleaños', 'desbloqueable'])->default('porcentaje');
+            $table->enum('tipo', ['2x1', 'combo', 'happy_hour', 'primera_compra', 'cumpleaños'])->default('2x1');
             $table->decimal('descuento_porcentaje', 5, 2)->nullable();
-            $table->decimal('descuento_monto', 10, 2)->nullable();
             $table->timestamp('fecha_inicio')->nullable();
             $table->timestamp('fecha_fin')->nullable();
             $table->json('dias_aplicables')->nullable();
-            $table->boolean('aplica_solo_primera_compra')->default(false);
-            $table->boolean('aplica_en_cumpleanos')->default(false);
-            $table->integer('compras_requeridas')->default(0);
             $table->boolean('activa')->default(true);
             $table->json('combo_detalle')->nullable();
             $table->timestamps();

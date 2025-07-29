@@ -9,11 +9,11 @@ class Pedido extends Model
 {
     /** @use HasFactory<\Database\Factories\PedidoFactory> */
     use HasFactory;
-    protected $primaryKey = 'pedido_id';
-    protected $table = 'pedidos';
 
     protected $fillable = [
         'cliente_id',
+        'promocion_id',
+        'fecha_pedido',
         'estado',
         'total',
         'direccion_entrega',
@@ -21,10 +21,17 @@ class Pedido extends Model
         'notas',
     ];
 
+    protected $casts = [
+        'fecha_pedido' => 'datetime',
+    ];
     // Relación con Cliente
     public function cliente()
     {
-        return $this->belongsTo(Cliente::class, 'cliente_id');
+        return $this->belongsTo(Cliente::class);
+    }
+    public function promocion()
+    {
+        return $this->belongsTo(Promocion::class);
     }
 
     // Relación con DetallePedidos

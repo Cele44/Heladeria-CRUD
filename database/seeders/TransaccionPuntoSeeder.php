@@ -12,6 +12,6 @@ class TransaccionPuntoSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\TransaccionPunto::factory(15)->create();
+        \App\Models\TransaccionPunto::factory(2)->create();
     }
 }

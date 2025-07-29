@@ -9,7 +9,6 @@ class Fidelizacion extends Model
 {
     /** @use HasFactory<\Database\Factories\FidelizacionFactory> */
     use HasFactory;
-    protected $primaryKey = 'fidelizacion_id';
     protected $table = 'fidelizacion';
 
     protected $fillable = [
@@ -27,6 +26,6 @@ class Fidelizacion extends Model
     // Relación con TransaccionesPuntos
     public function transacciones()
     {
-        return $this->hasMany(TransaccionPuntos::class, 'fidelizacion_id');
+        return $this->hasMany(TransaccionPunto::class, 'fidelizacion_id');
     }
 }

@@ -23,16 +23,12 @@ class DatabaseSeeder extends Seeder
         $this->call([
             ClienteSeeder::class,
             CategoriaSeeder::class,
-            DetallePedidoIngredienteSeeder::class,
-            ProductoSeeder::class,
             IngredienteSeeder::class,
-            ProductoIngredienteSeeder::class,
-            PedidoSeeder::class,
-            DetallePedidoSeeder::class,
+            ProductoSeeder::class,
             PromocionSeeder::class,
+            PedidoSeeder::class, 
             FidelizacionSeeder::class,
-            TransaccionPuntoSeeder::class,
-            NotificacionSeeder::class,
+            NotificacionSeeder::class,  
         ]);
     }
 }

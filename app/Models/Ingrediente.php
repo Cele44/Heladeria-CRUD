@@ -7,9 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ingrediente extends Model
 {
-    /** @use HasFactory<\Database\Factories\IngredienteFactory> */
     use HasFactory;
-    protected $primaryKey = 'ingrediente_id';
     protected $table = 'ingredientes';
 
     protected $fillable = [

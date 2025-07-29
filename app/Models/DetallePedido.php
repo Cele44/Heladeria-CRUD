@@ -9,8 +9,6 @@ class DetallePedido extends Model
 {
     /** @use HasFactory<\Database\Factories\DetallePedidoFactory> */
     use HasFactory;
-    protected $primaryKey = 'detalle_id';
-    protected $table = 'detalle_pedidos';
 
     protected $fillable = [
         'pedido_id',
@@ -19,18 +17,19 @@ class DetallePedido extends Model
         'precio_unitario',
         'subtotal',
         'instrucciones_especiales',
+        'promocion_id',
     ];
 
     // Relación con Pedido
     public function pedido()
     {
-        return $this->belongsTo(Pedido::class, 'pedido_id');
+        return $this->belongsTo(Pedido::class);
     }
 
     // Relación con Producto (opcional, puede ser nulo si es personalizado)
     public function producto()
     {
-        return $this->belongsTo(Producto::class, 'producto_id');
+        return $this->belongsTo(Producto::class);
     }
 
     // Relación muchos a muchos con Ingredientes (extras)
@@ -46,5 +45,9 @@ class DetallePedido extends Model
     public function ingredientesPersonalizados()
     {
         return $this->hasMany(DetallePedidoIngrediente::class, 'detalle_id');
+    }
+    public function promocion()
+    {
+        return $this->belongsTo(Promocion::class);
     }
 }

@@ -9,8 +9,6 @@ class Producto extends Model
 {
     /** @use HasFactory<\Database\Factories\ProductoFactory> */
     use HasFactory;
-    protected $primaryKey = 'producto_id';
-    protected $table = 'productos';
 
     protected $fillable = [
         'nombre',
@@ -20,14 +18,13 @@ class Producto extends Model
         'imagen_url',
         'disponible',
         'es_personalizado',
-        'calorias',
         'tiempo_preparacion',
     ];
 
     // Relación con Categoría
     public function categoria()
     {
-        return $this->belongsTo(Categoria::class, 'categoria_id');
+        return $this->belongsTo(Categoria::class, 'id');
     }
 
     // Relación muchos a muchos con Ingredientes (para personalización)
