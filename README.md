@@ -63,18 +63,12 @@ Abrir en navegador: http://localhost:8000
 ### Evidencias de la Tarea
 Migraciones y seeders ejecutadas correctamente
 
-Base de datos generada con datos random 
-
-<<<<<<< HEAD
-- **Categorias:** Define las categorías de productos para organizar el catálogo (por ejemplo, cono, copa, vaso).
-=======
-Interfaz gráfica funcional y navegable
->>>>>>> 2e4f4dd (Implementacion de CRUD)
+Base de datos generada con datos personalizados 
 
 
 
 ![1](img/Captura.PNG)  
-![2](img/1.PNG)  
+![2](img/2.PNG)  
 
 
 📜 Licencia  
