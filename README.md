@@ -1,4 +1,4 @@
-# 🍦 Heladería Web - Sistema de Pedidos Personalizados
+# 🍦 Heladería Web - Sistema de Pedidos Personalizados 
 
 ## 📝 Descripción del Proyecto
 
@@ -68,9 +68,9 @@ Base de datos generada con datos personalizados
 
 
 ![1](img/Captura.PNG)  
-![2](img/2.PNG)  
+![2](img/2.png)  
 
 
 📜 Licencia  
-MIT License - Copyright (c) 2025 Fernanda Estrada - Celeste Ortiz
+MIT License - Copyright (c) 2025 Fernanda Estrada - Maria Celeste Ortiz
 
